@@ -58,7 +58,17 @@ function sum() {}
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(avarNumParam) {
+  let numArrAvar = avarNumParam.length
+  let suma2= 0
+  if (avarNumParam.length === 0){
+    return null
+  }
+  for (let i=0; i<avarNumParam.length; i++){
+    suma2 = suma2 + avarNumParam[i]}
 
+  let avarNumReturn = (suma2/numArrAvar)
+  
+ return avarNumReturn
 }
 
 
