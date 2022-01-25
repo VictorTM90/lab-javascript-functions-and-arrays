@@ -37,15 +37,13 @@ return longestWord
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(numbersParam) {
- let sum =[]
+ let suma = 0
   for (let i=0; i<numbersParam.length; i++){
-    let number = numbersParam[i]
-    sum = number + numbersParam [i]
-  }
+    suma = suma + numbersParam[i]}
   if (numbersParam.length === 0 ) {
     return 0
   }
- return sum 
+ return suma 
 }
 
 
@@ -59,7 +57,9 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(avarNumParam) {
+
+}
 
 
 // Level 2: Array of strings
