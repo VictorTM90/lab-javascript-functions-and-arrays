@@ -150,9 +150,12 @@ function howManyTimes(countHowParam, wordHowParam) {
   if (countHowParam.length === 0){
     return 0
 }
+let count = 0
 for (let i=0; i<countHowParam.length; i++){
-  
-}
+  if ( countHowParam[i]===wordHowParam){
+    count++
+  }
+} return count 
 }
 
 // Iteration #8: Bonus
