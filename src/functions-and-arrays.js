@@ -97,23 +97,39 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(uniqArrParam) {
-  if (stringArrParam.length === 0){
+  if (uniqArrParam.length === 0){
     return null
 }
+let newArrParam =[]
 for (let i=0; i<uniqArrParam.length; i++){
-  let comparParam = uniquArrParam[i]
-  if (comparParam === uniquArrParam[i+1]){
+  let comparParam = uniqArrParam[i]
+  let valueIndxParam = uniqArrParam.indexOf(comparParam)
+  if ( valueIndxParam === -1){
+    newArrParam.push(comparParam)
+  } else if (valueIndxParam > 0) {
+    continue;
+  }
+ }return newArrParam
 
- }
 }
 
-}
+
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(elementsParam, wordParam) {
+  if (elementsParam.length === 0){
+    return null
+}
+if (elementsParam.includes(wordParam) === true) { // 
+  return true
+} else {
+  return false 
+}
+//Jorge : también directamente  return elementsParam.includes(wordParam) (meme explotar cabeza)
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -130,7 +146,14 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(countHowParam, wordHowParam) {
+  if (countHowParam.length === 0){
+    return 0
+}
+for (let i=0; i<countHowParam.length; i++){
+  
+}
+}
 
 // Iteration #8: Bonus
 const matrix = [
