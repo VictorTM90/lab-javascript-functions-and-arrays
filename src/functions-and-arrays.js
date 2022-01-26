@@ -70,7 +70,7 @@ function averageWordLength(stringArrParam) {
   let avarParam = 0;
 
   for (let i=0; i<stringArrParam.length; i++){
-    avarParam += avarParam[i].length
+    avarParam += stringArrParam[i].length
   } 
   
   let avarageWordParam = avarParam / stringArrParam.length;
@@ -97,20 +97,18 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(uniqArrParam) {
-  let unitStr =""
-  
-  for (let i=0; i=uniqArrParam; i++){
-    unitStr = uniqArrParam[i]
-  }
-  let indexArrParam =(uniqArrParam.indexOf(unitStr))
-  let newArr =[]
-  if (indexArrParam !== -1 ){
-newArr= uniqArrParam.splice (indexArrParam, 1)
-  } else {
+  if (stringArrParam.length === 0){
     return null
-  }
-  return newArr
 }
+for (let i=0; i<uniqArrParam.length; i++){
+  let comparParam = uniquArrParam[i]
+  if (comparParam === uniquArrParam[i+1]){
+
+ }
+}
+
+}
+
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
@@ -175,5 +173,5 @@ if (typeof module !== 'undefined') {
     doesWordExist,
     howManyTimes,
     greatestProduct
-  };
+  }
 }
