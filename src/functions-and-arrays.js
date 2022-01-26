@@ -1,81 +1,82 @@
 // Iteration #1: Find the maximum
 function maxOfTwoNumbers(num1, num2) {
-   if (num1<num2){
-    return num2
-  } else if (num2<num1){
-    return num1
-  } else if (num1===num2){
-    return num1
+  if (num1 < num2) {
+    return num2;
+  } else if (num2 < num1) {
+    return num1;
+  } else if (num1 === num2) {
+    return num1;
   } else {
-    return null
+    return null;
   }
-
 }
-
-
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
 function findLongestWord(wordParam) {
-let longestWord = ""
-if ( wordParam.length === 0 ){
-  return null
-}
-for (i=0; i<wordParam.length; i++){
-  if (longestWord.length < wordParam[i].length){
-    longestWord = wordParam[i]
+  let longestWord = '';
+  if (wordParam.length === 0) {
+    return null;
   }
-} 
-return longestWord
-}
-
-
-
+  for (i = 0; i < wordParam.length; i++) {
+    if (longestWord.length < wordParam[i].length) {
+      longestWord = wordParam[i];
+    }
+  }
+  return longestWord;
+}; 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(numbersParam) {
- let suma = 0
-  for (let i=0; i<numbersParam.length; i++){
-    suma = suma + numbersParam[i]}
-  if (numbersParam.length === 0 ) {
-    return 0
+  let suma = 0;
+  for (let i = 0; i < numbersParam.length; i++) {
+    suma = suma + numbersParam[i];
   }
- return suma 
+  if (numbersParam.length === 0) {
+    return 0;
+  }
+  return suma;
 }
-
-
 
 // Iteration #3.1 Bonus:
 function sum() {}
-
-
-
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(avarNumParam) {
-  let numArrAvar = avarNumParam.length
-  let suma2= 0
-  if (avarNumParam.length === 0){
-    return null
-  }
-  for (let i=0; i<avarNumParam.length; i++){
-    suma2 = suma2 + avarNumParam[i]}
-
-  let avarNumReturn = (suma2/numArrAvar)
-  
- return avarNumReturn
+  let numArrAvar = avarNumParam.length;
+  let suma2 = 0;
+  if (avarNumParam.length === 0) {
+    return null;
+  } 
+    for (let i = 0; i < avarNumParam.length; i++) {
+      suma2 = suma2 + avarNumParam[i];
+    } 
+    let avarNumReturn = suma2 / numArrAvar;
+    return avarNumReturn;
 }
-
-
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(stringArrParam) {
+
+  if (stringArrParam.length === 0){
+    return null
+}
+  let avarParam = 0;
+
+  for (let i=0; i<stringArrParam.length; i++){
+    avarParam += avarParam[i].length
+  } 
+  
+  let avarageWordParam = avarParam / stringArrParam.length;
+  
+  return avarageWordParam
+}
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -95,16 +96,26 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
-
-
+function uniquifyArray(uniqArrParam) {
+  let unitStr =""
+  
+  for (let i=0; i=uniqArrParam; i++){
+    unitStr = uniqArrParam[i]
+  }
+  let indexArrParam =(uniqArrParam.indexOf(unitStr))
+  let newArr =[]
+  if (indexArrParam !== -1 ){
+newArr= uniqArrParam.splice (indexArrParam, 1)
+  } else {
+    return null
+  }
+  return newArr
+}
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist() {}
-
-
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -122,8 +133,6 @@ const wordsCount = [
 ];
 
 function howManyTimes() {}
-
-
 
 // Iteration #8: Bonus
 const matrix = [
@@ -150,9 +159,6 @@ const matrix = [
 ];
 
 function greatestProduct() {}
-
-
-
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
