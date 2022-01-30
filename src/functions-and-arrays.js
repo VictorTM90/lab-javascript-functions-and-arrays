@@ -100,19 +100,28 @@ function uniquifyArray(uniqArrParam) {
   if (uniqArrParam.length === 0){
     return null
 }
-let newArrParam =[]
+const arrUniq =[] 
 for (let i=0; i<uniqArrParam.length; i++){
-  let comparParam = uniqArrParam[i]
-  let valueIndxParam = uniqArrParam.indexOf(comparParam)
-  if ( valueIndxParam === -1){
-    newArrParam.push(comparParam)
-  } else if (valueIndxParam > 0) {
-    continue;
+  let word= uniqArrParam[i]
+    if (arrUniq.indexOf(word)<0){
+      arrUniq.push(word);
+    }
+    }
+    return arrUniq
+    
   }
- }return newArrParam
+  
 
-}
 
+
+//  let arrCompParam =uniqArrParam[i]
+//     if (uniqArrParam[i] === uniqArrParam.length){
+//       arrUniq.push(uniqArrParam[i])
+//     } else if (uniqArrParam.indexOf(uniqArrParam[i]) >= 0 ){
+//       continue
+//     }
+ 
+ 
 
 
 
@@ -186,18 +195,18 @@ function greatestProduct() {}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
-if (typeof module !== 'undefined') {
-  module.exports = {
-    maxOfTwoNumbers,
-    findLongestWord,
-    sumNumbers,
-    sum,
-    averageNumbers,
-    averageWordLength,
-    avg,
-    uniquifyArray,
-    doesWordExist,
-    howManyTimes,
-    greatestProduct
+ if (typeof module !== 'undefined') {
+   module.exports = {
+     maxOfTwoNumbers,
+     findLongestWord,
+     sumNumbers,
+     sum,
+     averageNumbers,
+     averageWordLength,
+     avg,
+     uniquifyArray,
+     doesWordExist,
+     howManyTimes,
+     greatestProduct
   }
 }
